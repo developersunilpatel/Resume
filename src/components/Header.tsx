@@ -1,27 +1,32 @@
-'use client'
+"use client";
 
-import { Dialog, DialogPanel, PopoverGroup } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
-import React, { useState } from 'react'
+import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import React, { useState } from "react";
 
 const Header = () => {
-
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="bg-gray-900">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+      <nav
+        aria-label="Global"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Sunil Patel</span>
-            <Image
+            <strong className="text-[20px]">
+              &lt;<span className="text-[#ff7a2f]">F</span>rontend{" "}
+              <span className="text-[#ff7a2f]">D</span>eveloper /&gt;
+            </strong>
+            {/* <Image
               alt=""
               src="/dummi-thumb.png"
               width="100"
               height="100"
               className="h-8 w-auto"
-            />
+            /> */}
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -60,7 +65,11 @@ const Header = () => {
           </a>
         </div>
       </nav>
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+      <Dialog
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+        className="lg:hidden"
+      >
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
           <div className="flex items-center justify-between">
@@ -136,7 +145,7 @@ const Header = () => {
         </DialogPanel>
       </Dialog>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
