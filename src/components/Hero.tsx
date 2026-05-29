@@ -12,7 +12,8 @@ const Hero = () => {
         <div
           className="absolute inset-0 opacity-[0.05]"
           style={{
-            backgroundImage: "radial-gradient(circle at center, white 1px, transparent 1px)",
+            backgroundImage:
+              "radial-gradient(circle at center, white 1px, transparent 1px)",
             backgroundSize: "4px 4px",
           }}
         />
@@ -29,8 +30,7 @@ const Hero = () => {
           {/* Heading */}
           <h1 className="leading-[0.95] tracking-[-4px]">
             <span className="block text-[36px] font-bold text-white md:text-[72px]">
-              Hi, I&apos;m{" "}
-              <span className="text-[#ff7a2f]">KreyNik</span>
+              Hi, I&apos;m <span className="text-[#ff7a2f]">Sunil Patel</span>
             </span>
           </h1>
 
@@ -39,8 +39,8 @@ const Hero = () => {
             <span className="font-semibold text-white">
               Freelance UI/UX Designer & Frontend Developer.
             </span>{" "}
-            I design and build digital products that people love to use —
-            fast, clean, and accessible.
+            I design and build digital products that people love to use — fast,
+            clean, and accessible.
           </p>
 
           {/* Buttons */}
@@ -68,9 +68,7 @@ const Hero = () => {
                 <h3 className="text-[36px] font-bold leading-none text-white">
                   {item.value}
                 </h3>
-                <p className="mt-3 text-[16px] text-[#8d8d8d]">
-                  {item.label}
-                </p>
+                <p className="mt-3 text-[16px] text-[#8d8d8d]">{item.label}</p>
               </div>
             ))}
           </div>
@@ -85,7 +83,7 @@ const Hero = () => {
           <div className="relative">
             <div className="overflow-hidden rounded-[42px] border border-white/5 bg-[#111] shadow-[0_0_80px_rgba(0,0,0,0.6)]">
               <Image
-                src="/dummi-2.png"
+                src="/sunil-1.png"
                 alt="Profile"
                 width={560}
                 height={720}
@@ -105,6 +103,6 @@ const Hero = () => {
       </section>
     </main>
   );
-}
+};
 
-export default Hero
+export default Hero;
