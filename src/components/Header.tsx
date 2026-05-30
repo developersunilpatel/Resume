@@ -16,10 +16,7 @@ const Header = () => {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <strong className="text-[20px]">
-              &lt;<span className="text-[#ff7a2f]">F</span>rontend{" "}
-              <span className="text-[#ff7a2f]">D</span>eveloper /&gt;
-            </strong>
+            <strong className="text-[20px]">Sunil Patel</strong>
           </a>
         </div>
         <div className="flex lg:hidden">
