@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black text-white">
+    <main className="relative min-h-screen overflow-hidden text-white py-6 bg-gray-900">
       {/* Background Glow */}
       <div className="absolute inset-0">
-        <div className="absolute left-[-10%] top-[-20%] h-[700px] w-[700px] rounded-full bg-orange-500/10 blur-3xl" />
-        <div className="absolute right-[-10%] top-[10%] h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-3xl" />
+        <div className="absolute left-[-10%] top-[-20%] h-[700px] w-[700px] rounded-full bg-gray-500/10 blur-3xl" />
+        <div className="absolute right-[-10%] top-[10%] h-[500px] w-[500px] rounded-full bg-gray-500/10 blur-3xl" />
 
         {/* Noise / texture overlay */}
         <div
@@ -77,7 +77,7 @@ const Hero = () => {
         {/* RIGHT IMAGE */}
         <div className="relative hidden flex-1 items-center justify-center lg:flex">
           {/* Orange Glow */}
-          <div className="absolute h-[520px] w-[520px] rounded-full bg-orange-500/20 blur-[140px]" />
+          <div className="absolute h-[520px] w-[520px] rounded-full bg-gray-500/20 blur-[140px]" />
 
           {/* Image Card */}
           <div className="relative">

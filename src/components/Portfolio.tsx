@@ -30,7 +30,7 @@ const data: Data[] = [
 
 const Portfolio = () => {
   return (
-    <section className="relative text-white">
+    <section className="relative text-white py-6 bg-gray-800">
       <div className="relative min-h-[90vh] z-10 mx-auto flex container items-center justify-between gap-16 px-6 py-24 md:px-14 xl:px-20">
         <div className="flex flex-col">
           <p className="m-0 text-[18px] font-medium uppercase tracking-[5px] text-[#ff7a2f]">
@@ -45,7 +45,7 @@ const Portfolio = () => {
               return (
                 <div
                   key={index}
-                  className={`group scale-[0.98] hover:scale-[1] transition-all duration-300 bg-gray-800 p-0 rounded-xl overflow-hidden ${index === 0 ? "md:row-span-2" : ""}`}
+                  className={`group scale-[0.98] hover:scale-[1] transition-all duration-300 bg-gray-900 p-0 rounded-xl overflow-hidden ${index === 0 ? "md:row-span-2" : ""}`}
                 >
                   <span className="block">
                     <Image
@@ -62,7 +62,7 @@ const Portfolio = () => {
                         return (
                           <div
                             key={index}
-                            className={`flex items-center justify-center border-1 bg-gray-900 rounded-4xl px-3 py-0 h-[24px] text-[12px] ${index === 0 ? "text-[#ff7a2f] border-[#ff7a2f]" : "border-gray-500"}`}
+                            className={`flex items-center justify-center border-1 bg-gray-800 rounded-4xl px-3 py-0 h-[24px] text-[12px] ${index === 0 ? "text-[#ff7a2f] border-[#ff7a2f]" : "border-gray-500"}`}
                           >
                             {s}
                           </div>

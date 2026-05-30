@@ -20,13 +20,6 @@ const Header = () => {
               &lt;<span className="text-[#ff7a2f]">F</span>rontend{" "}
               <span className="text-[#ff7a2f]">D</span>eveloper /&gt;
             </strong>
-            {/* <Image
-              alt=""
-              src="/dummi-thumb.png"
-              width="100"
-              height="100"
-              className="h-8 w-auto"
-            /> */}
           </a>
         </div>
         <div className="flex lg:hidden">

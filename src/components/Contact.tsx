@@ -2,11 +2,11 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black text-white py-6">
+    <section className="relative min-h-screen overflow-hidden bg-gray-900 text-white py-6">
       {/* Background Glow */}
       <div className="absolute inset-0">
-        <div className="absolute left-[-10%] top-[-20%] h-[700px] w-[700px] rounded-full bg-orange-500/10 blur-3xl" />
-        <div className="absolute right-[-10%] top-[10%] h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-3xl" />
+        <div className="absolute left-[-10%] top-[-20%] h-[700px] w-[700px] rounded-full bg-gray-500/10 blur-3xl" />
+        <div className="absolute right-[-10%] top-[10%] h-[500px] w-[500px] rounded-full bg-gray-500/10 blur-3xl" />
 
         {/* Noise / texture overlay */}
         <div
