@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <main className="relative min-h-screen overflow-hidden text-white py-6 bg-gray-900">
+    <main
+      id="hero"
+      className="relative min-h-screen overflow-hidden text-white py-16 bg-gray-900"
+    >
       {/* Background Glow */}
       <div className="absolute inset-0">
         <div className="absolute left-[-10%] top-[-20%] h-[700px] w-[700px] rounded-full bg-gray-500/10 blur-3xl" />
@@ -49,9 +52,12 @@ const Hero = () => {
               View my work
             </button>
 
-            <button className="cursor-pointer flex h-[48px] items-center rounded-full border border-white/15 bg-white/5 px-12 text-[16px] font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/10">
+            <a
+              href="mailto:developersunilpatel@gmail.com"
+              className="cursor-pointer flex h-[48px] items-center rounded-full border border-white/15 bg-white/5 px-12 text-[16px] font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/10"
+            >
               Get in touch
-            </button>
+            </a>
           </div>
 
           {/* Divider */}
@@ -83,12 +89,12 @@ const Hero = () => {
           <div className="relative">
             <div className="overflow-hidden rounded-[42px] border border-white/5 bg-[#111] shadow-[0_0_80px_rgba(0,0,0,0.6)]">
               <Image
-                src="/sunil-1.png"
+                src="/sunil.png"
                 alt="Profile"
-                width={560}
-                height={720}
+                width={451}
+                height={526}
                 priority
-                className="h-[720px] w-[560px] object-cover"
+                className="max-h-[600px] max-w-[560px] object-cover object-center"
               />
             </div>
 

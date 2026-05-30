@@ -16,7 +16,7 @@ const tools = [
 
 const About = () => {
   return (
-    <section className="py-16 bg-gray-900">
+    <section id="about" className="py-16 bg-gray-900">
       <div className="relative min-h-[60vh] z-10 mx-auto flex container items-center justify-between gap-16 px-6 py-10 md:px-14 xl:px-20">
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="xl:p-16 lg:p-10 p-0 lg:mb-0 mb-8">

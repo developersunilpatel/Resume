@@ -9,7 +9,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-900">
+    <div className="bg-gray-900 fixed w-full z-50">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -33,20 +33,26 @@ const Header = () => {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="#about" className="text-sm/6 font-semibold text-white">
-            About
-          </a>
           <a href="#services" className="text-sm/6 font-semibold text-white">
             Services
           </a>
-          <a href="#skills" className="text-sm/6 font-semibold text-white">
+          {/* <a href="#skills" className="text-sm/6 font-semibold text-white">
             Skills
-          </a>
-          <a href="#projects" className="text-sm/6 font-semibold text-white">
-            Projects
-          </a>
+          </a> */}
           <a href="#portfolio" className="text-sm/6 font-semibold text-white">
             Portfolio
+          </a>
+          <a href="#about" className="text-sm/6 font-semibold text-white">
+            About
+          </a>
+          <a
+            href="#clientFeedback"
+            className="text-sm/6 font-semibold text-white"
+          >
+            Client Feedback
+          </a>
+          <a href="#blog" className="text-sm/6 font-semibold text-white">
+            Blog
           </a>
           <a href="#contact" className="text-sm/6 font-semibold text-white">
             Contact
@@ -137,7 +143,7 @@ const Header = () => {
           </div>
         </DialogPanel>
       </Dialog>
-    </header>
+    </div>
   );
 };
 

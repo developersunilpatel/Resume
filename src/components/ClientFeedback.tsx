@@ -54,7 +54,10 @@ const ClientFeedback = () => {
   };
 
   return (
-    <section className="relative text-white py-6 bg-gray-800">
+    <section
+      id="clientFeedback"
+      className="relative text-white py-16 bg-gray-800"
+    >
       <div className="relative min-h-[60vh] z-10 mx-auto flex container items-center justify-between gap-16 px-6 py-10 md:px-14 xl:px-20">
         <div className="flex flex-col w-full">
           <p className="m-0 text-[18px] font-medium uppercase tracking-[5px] text-[#ff7a2f]">
