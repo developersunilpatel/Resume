@@ -32,7 +32,7 @@ const blog: Data[] = [
 
 const Blog = () => {
   return (
-    <section className="relative text-white">
+    <section className="relative text-white py-6 bg-gray-900">
       <div className="relative min-h-[90vh] z-10 mx-auto flex container items-center justify-between gap-16 px-6 py-24 md:px-14 xl:px-20">
         <div className="flex flex-col">
           <p className="m-0 text-[18px] font-medium uppercase tracking-[5px] text-[#ff7a2f]">
