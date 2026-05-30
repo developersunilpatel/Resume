@@ -48,9 +48,12 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="mt-14 flex flex-wrap items-center gap-6">
-            <button className="cursor-pointer group flex h-[48px] items-center gap-3 rounded-full bg-white px-10 text-[16px] font-medium text-black transition-all duration-300 hover:scale-[1.02]">
+            <a
+              href="#portfolio"
+              className="cursor-pointer group flex h-[48px] items-center gap-3 rounded-full bg-white px-10 text-[16px] font-medium text-black transition-all duration-300 hover:scale-[1.02]"
+            >
               View my work
-            </button>
+            </a>
 
             <a
               href="mailto:developersunilpatel@gmail.com"

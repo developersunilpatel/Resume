@@ -59,7 +59,12 @@ const Header = () => {
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-white">
+          <a
+            href="/resume.pdf"
+            className="text-sm/6 font-semibold text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Resume <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -133,7 +138,9 @@ const Header = () => {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
                 >
                   Resume
