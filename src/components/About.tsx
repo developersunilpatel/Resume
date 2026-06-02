@@ -21,7 +21,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="xl:p-16 lg:p-10 p-0 lg:mb-0 mb-8">
             <Image
-              src="/dummi-1.png"
+              src="/sunil.png"
               alt="Icon"
               height={100}
               width={100}

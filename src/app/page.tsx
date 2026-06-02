@@ -8,20 +8,18 @@ import Portfolio from "@/components/Portfolio";
 import Services from "@/components/Services";
 
 export default function Home() {
-
-
   return (
     <>
       <Header />
 
       <Hero />
 
+      <About />
+
       <Services />
 
       <Portfolio />
 
-      <About />
-      
       <ClientFeedback />
 
       <Blog />

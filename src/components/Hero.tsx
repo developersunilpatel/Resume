@@ -1,10 +1,8 @@
-import Image from "next/image";
-
 const Hero = () => {
   return (
     <main
       id="hero"
-      className="relative min-h-screen overflow-hidden text-white py-16 bg-gray-900"
+      className="relative min-h-screen overflow-hidden text-white py-0 bg-gray-900"
     >
       {/* Background Glow */}
       <div className="absolute inset-0">
@@ -74,6 +72,25 @@ const Hero = () => {
             </div>
           ))}
         </div> */}
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hover:scale-[1.02] transition-all duration-300">
+          <a href="#about">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-chevron-down w-8 h-8 mx-auto text-emerald-400 animate-pulse"
+            >
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </a>
+        </div>
       </section>
     </main>
   );
