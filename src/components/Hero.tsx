@@ -1,9 +1,18 @@
+"use client";
+
+import MouseGlow from "@/components/MouseGlow";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+import { HiOutlineMail } from "react-icons/hi";
+
 const Hero = () => {
   return (
     <main
       id="hero"
-      className="relative min-h-screen overflow-hidden text-white py-0 bg-gray-900"
+      className="relative min-h-screen overflow-hidden text-white py-0 bg-gray-900 selection:bg-emerald-400/30"
     >
+      <MouseGlow />
+
       {/* Background Glow */}
       <div className="absolute inset-0">
         <div className="absolute left-[-10%] top-[-20%] h-[700px] w-[700px] rounded-full bg-gray-500/10 blur-3xl" />
@@ -22,7 +31,21 @@ const Hero = () => {
 
       <section className="relative z-10 mx-auto flex flex-col min-h-screen container items-center justify-center gap-6 px-6 py-10 md:px-14 xl:px-20">
         {/* Heading */}
-        <div className="leading-[0.95] tracking-[-4px]">
+        <div
+          className="relative leading-[0.95] tracking-[-4px] transition-transform duration-200"
+          onMouseMove={(e) => {
+            const target = e.currentTarget;
+
+            const x = (window.innerWidth / 2 - e.clientX) * 0.01;
+            const y = (window.innerHeight / 2 - e.clientY) * 0.01;
+
+            target.style.transform = `translate(${x}px, ${y}px)`;
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = `translate(0px,0px)`;
+          }}
+        >
+          <div className="absolute inset-0 bg-emerald-500/20 blur-3xl opacity-20" />
           <div className="text-[36px] text-center font-bold text-white md:text-[72px]">
             {/* Hi, I&apos;m <br /> &lt; */}
             <span className="text-[#ff7a2f] capitalize tracking-[4px]">
@@ -31,7 +54,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <p className="mt-10 max-w-[640px] text-[14px] leading-[1.7] text-[#9e9e9e] md:text-[24px]">
+        <p className="mt-10 max-w-[640px] text-[14px] leading-[1.4] text-[#9e9e9e] md:text-[24px] md:tracking-[2px] tracking-[1px] text-center mb-4">
           Crafting exceptional user experiences with React, Next.js, and modern
           web technologies. Specialized in performance optimization and scalable
           frontend architectures.
@@ -40,17 +63,34 @@ const Hero = () => {
         {/* Buttons */}
         <div className="mt-4 flex flex-wrap items-center gap-6">
           <a
-            href="#portfolio"
-            className="cursor-pointer group flex h-[48px] items-center gap-3 rounded-full bg-white px-10 text-[16px] font-medium text-black transition-all duration-300 hover:scale-[1.02]"
+            href="https://www.linkedin.com/in/developersunilpatel"
+            target="_blank"
+            className="cursor-pointer group flex h-[48px] items-center gap-3 rounded-full bg-white px-10 text-[16px] font-medium text-black transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02]"
           >
-            View my work
+            <FaLinkedinIn size={20} />
+          </a>
+
+          <a
+            href="https://github.com/jskpatel"
+            target="_blank"
+            className="cursor-pointer group flex h-[48px] items-center gap-3 rounded-full bg-white px-10 text-[16px] font-medium text-black transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02]"
+          >
+            <FaGithub size={20} />
+          </a>
+
+          <a
+            href="https://leetcode.com/u/Jskpatel_2015/"
+            target="_blank"
+            className="cursor-pointer group flex h-[48px] items-center gap-3 rounded-full bg-white px-10 text-[16px] font-medium text-black transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02]"
+          >
+            <SiLeetcode size={20} />
           </a>
 
           <a
             href="mailto:developersunilpatel@gmail.com"
-            className="cursor-pointer flex h-[48px] items-center rounded-full border border-white/15 bg-white/5 px-12 text-[16px] font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/10"
+            className="cursor-pointer flex h-[48px] items-center gap-3 rounded-full border border-white/15 bg-white/5 px-12 text-[16px] font-medium text-white backdrop-blur-sm transition-all duration-500 ease-out hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
           >
-            Get in touch
+            <HiOutlineMail size={20} />
           </a>
         </div>
 
