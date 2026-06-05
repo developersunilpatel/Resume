@@ -30,27 +30,27 @@ const Header = () => {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="#services" className="text-sm/6 font-semibold text-white">
-            Services
+          <a href="#about" className="text-sm/6 font-semibold text-white">
+            About
           </a>
-          {/* <a href="#skills" className="text-sm/6 font-semibold text-white">
+          <a href="#skills" className="text-sm/6 font-semibold text-white">
             Skills
+          </a>
+          {/* <a href="#services" className="text-sm/6 font-semibold text-white">
+            Services
           </a> */}
           <a href="#portfolio" className="text-sm/6 font-semibold text-white">
             Portfolio
           </a>
-          <a href="#about" className="text-sm/6 font-semibold text-white">
-            About
-          </a>
-          <a
+          {/* <a
             href="#clientFeedback"
             className="text-sm/6 font-semibold text-white"
           >
             Client Feedback
-          </a>
-          <a href="#blog" className="text-sm/6 font-semibold text-white">
+          </a> */}
+          {/* <a href="#blog" className="text-sm/6 font-semibold text-white">
             Blog
-          </a>
+          </a> */}
           <a href="#contact" className="text-sm/6 font-semibold text-white">
             Contact
           </a>
@@ -102,12 +102,12 @@ const Header = () => {
                 >
                   About
                 </a>
-                <a
+                {/* <a
                   href="#services"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
                 >
                   Services
-                </a>
+                </a> */}
                 <a
                   href="#skills"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"

@@ -1,11 +1,12 @@
 import About from "@/components/About";
-import Blog from "@/components/Blog";
-import ClientFeedback from "@/components/ClientFeedback";
+// import Blog from "@/components/Blog";
+// import ClientFeedback from "@/components/ClientFeedback";
 import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
-import Services from "@/components/Services";
+// import Services from "@/components/Services";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -16,13 +17,15 @@ export default function Home() {
 
       <About />
 
-      <Services />
+      <Skills />
+
+      {/* <Services /> */}
 
       <Portfolio />
 
-      <ClientFeedback />
+      {/* <ClientFeedback /> */}
 
-      <Blog />
+      {/* <Blog /> */}
 
       <Contact />
     </>
