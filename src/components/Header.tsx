@@ -29,28 +29,19 @@ const Header = () => {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+        <PopoverGroup className="hidden lg:flex lg:gap-x-12 lg:justify-end ml-auto">
           <a href="#about" className="text-sm/6 font-semibold text-white">
             About
           </a>
           <a href="#skills" className="text-sm/6 font-semibold text-white">
             Skills
           </a>
-          {/* <a href="#services" className="text-sm/6 font-semibold text-white">
-            Services
-          </a> */}
           <a href="#portfolio" className="text-sm/6 font-semibold text-white">
             Portfolio
           </a>
-          {/* <a
-            href="#clientFeedback"
-            className="text-sm/6 font-semibold text-white"
-          >
-            Client Feedback
-          </a> */}
-          {/* <a href="#blog" className="text-sm/6 font-semibold text-white">
-            Blog
-          </a> */}
+          <a href="#experience" className="text-sm/6 font-semibold text-white">
+            Experience
+          </a>
           <a href="#contact" className="text-sm/6 font-semibold text-white">
             Contact
           </a>
@@ -102,12 +93,6 @@ const Header = () => {
                 >
                   About
                 </a>
-                {/* <a
-                  href="#services"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                >
-                  Services
-                </a> */}
                 <a
                   href="#skills"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
@@ -115,16 +100,16 @@ const Header = () => {
                   Skills
                 </a>
                 <a
-                  href="#projects"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                >
-                  Projects
-                </a>
-                <a
                   href="#portfolio"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
                 >
                   Portfolio
+                </a>
+                <a
+                  href="#experience"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                >
+                  Experience
                 </a>
                 <a
                   href="#contact"

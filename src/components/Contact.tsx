@@ -62,7 +62,7 @@ const Contact = () => {
         className="group container scale-[0.95] rounded-xl bg-gray-800 p-7 transition-all duration-300 hover:scale-[1] hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
       >
         <div className="relative z-10 mx-auto flex container items-center justify-between gap-16 px-6 py-14 md:px-14 xl:px-20">
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1">
             <div className="flex flex-col">
               <p className="m-0 text-[18px] font-medium uppercase tracking-[5px] text-[#ff7a2f]">
                 Get in touch

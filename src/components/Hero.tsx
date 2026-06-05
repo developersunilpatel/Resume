@@ -65,7 +65,7 @@ const Hero = () => {
           <a
             href="https://www.linkedin.com/in/developersunilpatel"
             target="_blank"
-            className="cursor-pointer group flex h-[48px] items-center gap-3 rounded-full bg-white px-10 text-[16px] font-medium text-black transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02]"
+            className="cursor-pointer group flex lg:h-[48px] h-[50px] items-center gap-3 rounded-full bg-white lg:px-10 px-4 text-[16px] font-medium text-black transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02]"
           >
             <FaLinkedinIn size={20} />
           </a>
@@ -73,7 +73,7 @@ const Hero = () => {
           <a
             href="https://github.com/jskpatel"
             target="_blank"
-            className="cursor-pointer group flex h-[48px] items-center gap-3 rounded-full bg-white px-10 text-[16px] font-medium text-black transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02]"
+            className="cursor-pointer group flex lg:h-[48px] h-[50px] items-center gap-3 rounded-full bg-white lg:px-10 px-4 text-[16px] font-medium text-black transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02]"
           >
             <FaGithub size={20} />
           </a>
@@ -81,37 +81,18 @@ const Hero = () => {
           <a
             href="https://leetcode.com/u/Jskpatel_2015/"
             target="_blank"
-            className="cursor-pointer group flex h-[48px] items-center gap-3 rounded-full bg-white px-10 text-[16px] font-medium text-black transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02]"
+            className="cursor-pointer group flex lg:h-[48px] h-[50px] items-center gap-3 rounded-full bg-white lg:px-10 px-4 text-[16px] font-medium text-black transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02]"
           >
             <SiLeetcode size={20} />
           </a>
 
           <a
             href="mailto:developersunilpatel@gmail.com"
-            className="cursor-pointer flex h-[48px] items-center gap-3 rounded-full border border-white/15 bg-white/5 px-12 text-[16px] font-medium text-white backdrop-blur-sm transition-all duration-500 ease-out hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
+            className="cursor-pointer flex lg:h-[48px] h-[50px] items-center gap-3 rounded-full border border-white/15 bg-white/5 lg:px-10 px-4 text-[16px] font-medium text-white backdrop-blur-sm transition-all duration-500 ease-out hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
           >
             <HiOutlineMail size={20} />
           </a>
         </div>
-
-        {/* Divider */}
-        {/* <div className="mt-4 h-px w-full bg-white/8" /> */}
-
-        {/* Stats */}
-        {/* <div className="mt-4 flex flex-wrap gap-16 md:gap-24">
-          {[
-            { value: "34+", label: "Projects done" },
-            { value: "21+", label: "Happy clients" },
-            { value: "5y", label: "Experience" },
-          ].map((item) => (
-            <div key={item.label}>
-              <h3 className="text-[36px] font-bold leading-none text-white">
-                {item.value}
-              </h3>
-              <p className="mt-3 text-[16px] text-[#8d8d8d]">{item.label}</p>
-            </div>
-          ))}
-        </div> */}
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hover:scale-[1.02] transition-all duration-300">
           <a href="#about">

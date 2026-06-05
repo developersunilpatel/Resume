@@ -2,6 +2,7 @@ import About from "@/components/About";
 // import Blog from "@/components/Blog";
 // import ClientFeedback from "@/components/ClientFeedback";
 import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
@@ -26,6 +27,8 @@ export default function Home() {
       {/* <ClientFeedback /> */}
 
       {/* <Blog /> */}
+
+      <Experience />
 
       <Contact />
     </>
