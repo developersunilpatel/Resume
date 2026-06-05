@@ -1,6 +1,7 @@
 import React from "react";
 import { FiPhone, FiMapPin, FiMail, } from "react-icons/fi";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import SectionTitle from "./SectionTitle";
 
 interface ContactDetails {
   icon: React.ReactElement,
@@ -40,7 +41,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative min-h-[70vh] overflow-hidden bg-gray-900 text-white py-26"
+      className="relative md:min-h-[70vh] overflow-hidden bg-gray-900 text-white md:py-26 py-6"
     >
       {/* Background Glow */}
       <div className="absolute inset-0">
@@ -59,18 +60,15 @@ const Contact = () => {
       </div>
 
       <div
-        className="group container scale-[0.95] rounded-xl bg-gray-800 p-7 transition-all duration-300 hover:scale-[1] hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
+        className="group container scale-[0.95] rounded-xl bg-gray-800 md:p-7 py-7 px-3 transition-all duration-300 hover:scale-[1] hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
       >
-        <div className="relative z-10 mx-auto flex container items-center justify-between gap-16 px-6 py-14 md:px-14 xl:px-20">
+        <div className="relative z-10 mx-auto flex container items-center justify-between gap-16 px-6 md:py-14 py-5 md:px-14 xl:px-20">
           <div className="grid grid-cols-1">
             <div className="flex flex-col">
-              <p className="m-0 text-[18px] font-medium uppercase tracking-[5px] text-[#ff7a2f]">
-                Get in touch
-              </p>
-              <span className="text-[54px] font-bold text-white mb-5">
-                Let&rsquo;s work together
-              </span>
-              <p className="max-w-[640px] text-[14px] leading-[1.7] text-[#9e9e9e] md:text-[18px]">
+
+              <SectionTitle title="Let&rsquo;s work together" subTitle="Get in touch" />
+
+              <p className="max-w-[640px] md:text-[22px] text-[20px] leading-[1.7] text-[#ccc] group-hover:text-white">
                 I&rsquo;m open to UI/UX and frontend missions, short or long-term.
                 Landing page, full product redesign, or just a second pair of eyes
                 — let&rsquo;s talk.
@@ -82,12 +80,12 @@ const Contact = () => {
                     return <a
                       key={index}
                       href={data.link}
-                      className="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"
+                      className="group flex items-center gap-3 text-[#ccc] group-hover:text-white hover:text-white transition-colors md:text-[22px] text-[20px]"
                     >
                       <span className="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
                         {data.icon}
                       </span>
-                      <span className="text-[16px]">{data.text}</span>
+                      <span>{data.text}</span>
                     </a>
                   })
                 }

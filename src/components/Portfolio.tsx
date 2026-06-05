@@ -128,7 +128,7 @@ const Portfolio = () => {
                       {item?.description?.map((para: string, index: number) => (
                         <li
                           key={index}
-                          className="flex items-start gap-3 text-[16px] text-[#ccc] hover:text-[#fff] transition-colors duration-300"
+                          className="flex items-start gap-3 text-[18px] text-[#ccc] hover:text-[#fff] transition-colors duration-300"
                         >
                           <span className="mt-[10px] h-1.5 w-1.5 rounded-full bg-[#ff7a2f] shrink-0" />
                           <span>{para.trim()}</span>
