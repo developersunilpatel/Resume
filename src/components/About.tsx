@@ -1,6 +1,7 @@
 import React from "react";
 import { HiOutlineLocationMarker, HiOutlinePhone, HiOutlineMail, HiOutlineAcademicCap, } from "react-icons/hi";
 import { FiCode, FiTarget, FiUsers, FiTrendingUp, } from "react-icons/fi";
+import SectionTitle from "./SectionTitle";
 
 const qualities = [
   {
@@ -18,6 +19,30 @@ const qualities = [
   {
     title: "Growth Mindset",
     icon: FiTrendingUp,
+  },
+];
+
+interface Bullet {
+  text: string;
+  icon: React.ReactElement
+}
+
+const bullets: Bullet[] = [
+  {
+    text: "Ahmedabad, Gujarat, India",
+    icon: <HiOutlineLocationMarker className="text-[#ff7a2f]" size={22} />,
+  },
+  {
+    text: "+91-9909301307",
+    icon: <HiOutlinePhone className="text-[#ff7a2f]" size={22} />,
+  },
+  {
+    text: "developersunilpatel@gmail.com",
+    icon: <HiOutlineMail className="text-[#ff7a2f]" size={22} />,
+  },
+  {
+    text: "BCA - Gujarat University",
+    icon: <HiOutlineAcademicCap className="text-[#ff7a2f]" size={22} />,
   },
 ];
 
@@ -43,7 +68,7 @@ const About = () => {
                       />
                     </div>
 
-                    <h3 className="text-[24px] font-semibold text-white transition-colors duration-300 group-hover:text-[#ff7a2f]" >
+                    <h3 className="text-[26px] font-semibold text-white transition-colors duration-300 group-hover:text-[#ff7a2f]" >
                       {item.title}
                     </h3>
                   </div>
@@ -52,29 +77,24 @@ const About = () => {
             </div>
           </div>
           <div className="">
-            <p className="m-0 text-[18px] font-medium uppercase tracking-[5px] text-[#ff7a2f] mb-6">
-              About me
-            </p>
-            <div className="text-[54px] font-bold text-white xl:mb-10 md:mb-7 mb-4 capitalize leading-[64px]">
-              A bit About Me
-            </div>
-            <p className="mb-8 text-[20px] leading-[40px]">
+            
+            <SectionTitle title="A bit About Me" subTitle="About me" />
+
+            <p className="mb-8 text-[22px] text-[#ccc] leading-[40px]">
               Passionate Frontend Developer with 4+ years of experience building scalable web applications. Currently working at Simple Energy, where I have contributed to significant revenue growth through innovative frontend solutions and performance optimizations.
             </p>
 
-            <ul className="text-[18px] flex flex-col gap-3 mt-12">
-              <li className="flex gap-4">
-                <HiOutlineLocationMarker className="text-[#ff7a2f]" size={22} /> Ahmedabad, Gujarat, India
-              </li>
-              <li className="flex gap-4">
-                <HiOutlinePhone className="text-[#ff7a2f]" size={22} /> +91-9909301307
-              </li>
-              <li className="flex gap-4">
-                <HiOutlineMail className="text-[#ff7a2f]" size={22} /> developersunilpatel@gmail.com
-              </li>
-              <li className="flex gap-4">
-                <HiOutlineAcademicCap className="text-[#ff7a2f]" size={22} /> BCA - Gujarat University
-              </li>
+            <ul className="text-[22px] flex flex-col gap-3 mt-12 text-[#ccc]">
+              {
+                bullets.map((bullet: Bullet, index: number) => {
+                  return <li key={index} className="flex gap-4">
+                    <span className="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
+                      {bullet.icon}
+                    </span>
+                    {bullet.text}
+                  </li>
+                })
+              }
             </ul>
           </div>
         </div>

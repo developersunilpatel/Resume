@@ -7,6 +7,7 @@ import {
   HiOutlineCalendar,
   HiOutlineLocationMarker,
 } from "react-icons/hi";
+import SectionTitle from "./SectionTitle";
 
 const experiences = [
   {
@@ -87,14 +88,7 @@ export default function Experience() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <p className="m-0 text-[18px] font-medium uppercase tracking-[5px] text-[#ff7a2f]">
-            Experience
-          </p>
-          <span className="text-[54px] font-bold text-white xl:mb-15 md:mb-10 mb-5">
-            Experience
-          </span>
-
-          {/* <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-[#35e0a1]" /> */}
+          <SectionTitle title="Experience" subTitle="Experience" />
         </motion.div>
 
         <div className="relative">
@@ -112,7 +106,7 @@ export default function Experience() {
                   delay: index * 0.15,
                 }}
                 viewport={{ once: true }}
-                className="relative flex flex-col gap-6 md:flex-row"
+                className="group relative flex flex-col gap-6 md:flex-row"
               >
                 {/* timeline icon */}
                 <div className="relative z-10 hidden md:flex">
@@ -158,20 +152,20 @@ export default function Experience() {
                     </div>
 
                     {/* right */}
-                    <div className="flex flex-col text-[20px] items-start gap-2 text-left lg:items-end lg:text-right">
-                      <div className="flex items-center gap-2 text-gray-300">
+                    <div className="flex flex-col text-[20px] items-start gap-2 text-left lg:items-end lg:text-right group-hover:text-white">
+                      <div className="flex items-center gap-2 text-gray-300 group-hover:text-white">
                         <HiOutlineCalendar
                           size={18}
-                          className="text-gray-400"
+                          className="text-gray-400 group-hover:text-white"
                         />
 
                         <span>{item.duration}</span>
                       </div>
 
-                      <div className="flex items-center gap-2 text-gray-400">
+                      <div className="flex items-center gap-2 text-gray-400 group-hover:text-white">
                         <HiOutlineLocationMarker
                           size={18}
-                          className="text-gray-400"
+                          className="text-gray-400 group-hover:text-white"
                         />
 
                         <span>{item.location}</span>
@@ -191,7 +185,7 @@ export default function Experience() {
                           delay: i * 0.08,
                         }}
                         viewport={{ once: true }}
-                        className="flex gap-4 text-[20px] leading-[30px] text-gray-300"
+                        className="flex gap-4 text-[20px] leading-[30px] text-gray-300 group-hover:text-white"
                       >
                         <span className="mt-[10px] h-[8px] min-w-[8px] rounded-full bg-gray-500" />
 

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { FiCode } from "react-icons/fi";
 import { LuGauge, LuPanelsTopLeft, } from "react-icons/lu";
+import SectionTitle from "./SectionTitle";
 
 type Skill = {
   name: string;
@@ -84,13 +85,7 @@ export default function Skills() {
           <div className="absolute right-1/4 bottom-20 h-72 w-72 rounded-full bg-green-500 blur-[140px]" />
         </div>
 
-
-        <p className="m-0 text-[18px] font-medium uppercase tracking-[5px] text-[#ff7a2f] mb-6">
-          About my skills
-        </p>
-        <div className="text-[54px] font-bold text-white mb-24 capitalize leading-[64px]">
-          Skills & Expertise
-        </div>
+        <SectionTitle title="Skills & Expertise" subTitle="About my skills" />
 
         <div className="relative z-10 w-full">
           <div className="grid gap-8 lg:grid-cols-2">
@@ -145,15 +140,15 @@ export default function Skills() {
           </div>
         </div>
 
-        <div className="xl:py-16 lg:py-10 p-0 lg:mb-0 mb-8">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="xl:py-16 lg:py-10 p-0 lg:mt-0 mt-20">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
             {expertise.map((item, index) => {
               const Icon = item.icon;
 
               return (
                 <div
                   key={index}
-                  className="group scale-[0.95] rounded-xl bg-gray-700 p-7 transition-all duration-300 hover:scale-[1] hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
+                  className="group lg:scale-[0.95] lg:hover:scale-[1] scale-[1] hover:scale-[0.95] rounded-xl bg-gray-700 p-7 transition-all duration-300 hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
                 >
                   <div className="mb-14">
                     <Icon
@@ -162,11 +157,11 @@ export default function Skills() {
                     />
                   </div>
 
-                  <h3 className="text-[24px] font-semibold text-white transition-colors duration-300 group-hover:text-[#ff7a2f]" >
+                  <h3 className="text-[26px] font-semibold text-white transition-colors duration-300" >
                     {item.title}
                   </h3>
 
-                  <p className="text-[14px] text-[#ccc] transition-colors duration-300 group-hover:text-[#ff7a2f]" >
+                  <p className="text-[22px] text-[#ccc] transition-colors duration-300 group-hover:text-white" >
                     {item.skills}
                   </p>
                 </div>
