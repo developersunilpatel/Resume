@@ -87,7 +87,7 @@ const data: Data[] = [
 const Portfolio = () => {
   return (
     <section id="portfolio" className="relative text-white py-6 bg-gray-900">
-      <div className="relative min-h-[90vh] z-10 mx-auto flex container items-center justify-between gap-16 px-6 py-24 md:px-14 xl:px-20">
+      <div className="relative min-h-[90vh] z-10 mx-auto flex container items-center justify-between gap-16 py-24">
         <div className="flex flex-col">
 
           <SectionTitle title="Worked on" subTitle="Portfolio" />

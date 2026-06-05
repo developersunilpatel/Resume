@@ -76,7 +76,7 @@ export default function Skills() {
   return (
 
     <section id="skills" className="py-16 bg-gray-800">
-      <div className="relative min-h-[70vh] z-10 mx-auto flex flex-col container justify-between px-6 py-10 md:px-14 xl:px-20">
+      <div className="relative min-h-[70vh] z-10 mx-auto flex flex-col container justify-between py-10">
 
 
         {/* Background Glow */}

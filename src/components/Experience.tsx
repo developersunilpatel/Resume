@@ -79,7 +79,7 @@ export default function Experience() {
       {/* subtle grid */}
       <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-      <div className="container relative z-10 mx-auto px-6 md:px-10">
+      <div className="container relative z-10 mx-auto">
         {/* heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}

@@ -60,9 +60,9 @@ const Contact = () => {
       </div>
 
       <div
-        className="group container scale-[0.95] rounded-xl bg-gray-800 md:p-7 py-7 px-3 transition-all duration-300 hover:scale-[1] hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
+        className="group container scale-[0.95] rounded-xl bg-gray-800 md:p-7 py-7 transition-all duration-300 hover:scale-[1] hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
       >
-        <div className="relative z-10 mx-auto flex container items-center justify-between gap-16 px-6 md:py-14 py-5 md:px-14 xl:px-20">
+        <div className="relative z-10 mx-auto flex items-center justify-between gap-16 md:py-14 py-5 md:px-14 xl:px-20">
           <div className="grid grid-cols-1">
             <div className="flex flex-col">
 
