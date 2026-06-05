@@ -145,10 +145,6 @@ export default function Skills() {
           </div>
         </div>
 
-
-
-
-
         <div className="xl:py-16 lg:py-10 p-0 lg:mb-0 mb-8">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {expertise.map((item, index) => {
@@ -157,7 +153,7 @@ export default function Skills() {
               return (
                 <div
                   key={index}
-                  className="group scale-[0.95] rounded-xl bg-gray-800 p-7 transition-all duration-300 hover:scale-[1] hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
+                  className="group scale-[0.95] rounded-xl bg-gray-700 p-7 transition-all duration-300 hover:scale-[1] hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
                 >
                   <div className="mb-14">
                     <Icon

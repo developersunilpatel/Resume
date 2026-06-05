@@ -7,9 +7,9 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Hero = () => {
   return (
-    <main
+    <section
       id="hero"
-      className="relative min-h-screen overflow-hidden text-white py-0 bg-gray-900 selection:bg-emerald-400/30"
+      className="relative md:min-h-screen min-h-[90vh] overflow-hidden text-white py-0 bg-gray-900 selection:bg-emerald-400/30"
     >
       <MouseGlow />
 
@@ -29,7 +29,7 @@ const Hero = () => {
         />
       </div>
 
-      <section className="relative z-10 mx-auto flex flex-col min-h-screen container items-center justify-center gap-6 px-6 py-10 md:px-14 xl:px-20">
+      <div className="relative min-h-[90vh] z-10 mx-auto flex flex-col container items-center justify-center gap-6 px-6 py-10 md:px-14 xl:px-20">
         {/* Heading */}
         <div
           className="relative leading-[0.95] tracking-[-4px] transition-transform duration-200"
@@ -46,15 +46,12 @@ const Hero = () => {
           }}
         >
           <div className="absolute inset-0 bg-emerald-500/20 blur-3xl opacity-20" />
-          <div className="text-[36px] text-center font-bold text-white md:text-[72px]">
-            {/* Hi, I&apos;m <br /> &lt; */}
-            <span className="text-[#ff7a2f] capitalize tracking-[4px]">
-              &lt;frontend developer /&gt;
-            </span>
+          <div className="text-[42px] text-center font-bold md:text-[72px] text-[#ff7a2f] capitalize md:tracking-[4px] tracking-[1px]">
+            &lt;frontend developer /&gt;
           </div>
         </div>
 
-        <p className="mt-10 max-w-[640px] text-[14px] leading-[1.4] text-[#9e9e9e] md:text-[24px] md:tracking-[2px] tracking-[1px] text-center mb-4">
+        <p className="mt-10 max-w-[640px] text-[24px] leading-[1.8] text-[#ccc] md:text-[24px] md:tracking-[2px] tracking-[1px] text-center mb-4">
           Crafting exceptional user experiences with React, Next.js, and modern
           web technologies. Specialized in performance optimization and scalable
           frontend architectures.
@@ -112,8 +109,8 @@ const Hero = () => {
             </svg>
           </a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 
