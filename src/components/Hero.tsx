@@ -68,7 +68,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://github.com/jskpatel"
+            href="https://github.com/developersunilpatel"
             target="_blank"
             className="cursor-pointer group flex lg:h-[48px] h-[50px] items-center gap-3 rounded-full bg-white lg:px-10 px-4 text-[16px] font-medium text-black transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02]"
           >
