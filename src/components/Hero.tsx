@@ -96,7 +96,7 @@ const Hero = () => {
           variants={itemVariants}
           className="mb-4 mt-10 max-w-[640px] text-center text-[24px] leading-[1.8] tracking-[1px] text-[#ccc] md:text-[24px] md:tracking-[2px]"
         >
-          Crafting exceptional user experiences with React, Next.js, and modern
+          Crafting exceptional user experiences with <span className="uppercase tracking-[5px] text-[#ff7a2f] block font-bold underline">React.js / Next.js,</span> and modern
           web technologies. Specialized in performance optimization and scalable
           frontend architectures.
         </motion.p>
