@@ -157,8 +157,7 @@ const Header = () => {
             />
 
             {/* Drawer */}
-            <DialogPanel
-              as={motion.div}
+            <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -169,65 +168,69 @@ const Header = () => {
               }}
               className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm"
             >
-              {/* Header */}
-              <div className="flex items-center justify-between">
-                <motion.h2
+              <DialogPanel>
+
+                {/* Header */}
+                <div className="flex items-center justify-between">
+                  <motion.h2
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="text-[24px] font-bold text-white uppercase"
+                  >
+                    &lt;Sunil Patel /&gt;
+                  </motion.h2>
+
+                  <motion.button
+                    whileTap={{ scale: 0.9 }}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="rounded-md p-2 text-gray-300"
+                  >
+                    <XMarkIcon className="h-6 w-6" />
+                  </motion.button>
+                </div>
+
+                {/* Menu Items */}
+                <motion.div
+                  variants={mobileMenuContainer}
+                  initial="hidden"
+                  animate="show"
+                  className="mt-10 space-y-2"
+                >
+                  {menuItems.map((item) => (
+                    <motion.a
+                      key={item.label}
+                      variants={mobileMenuItem}
+                      href={item.href}
+                      whileTap={{ scale: 0.97 }}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block rounded-lg px-4 py-3 text-[20px] font-semibold text-white hover:bg-white/10"
+                    >
+                      {item.label}
+                    </motion.a>
+                  ))}
+                </motion.div>
+
+                {/* Resume */}
+                <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="text-[24px] font-bold text-white uppercase"
+                  transition={{ delay: 0.4 }}
+                  className="mt-8 border-t border-white/10 pt-6"
                 >
-                  &lt;Sunil Patel /&gt;
-                </motion.h2>
-
-                <motion.button
-                  whileTap={{ scale: 0.9 }}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-md p-2 text-gray-300"
-                >
-                  <XMarkIcon className="h-6 w-6" />
-                </motion.button>
-              </div>
-
-              {/* Menu Items */}
-              <motion.div
-                variants={mobileMenuContainer}
-                initial="hidden"
-                animate="show"
-                className="mt-10 space-y-2"
-              >
-                {menuItems.map((item) => (
                   <motion.a
-                    key={item.label}
-                    variants={mobileMenuItem}
-                    href={item.href}
-                    whileTap={{ scale: 0.97 }}
-                    onClick={() => setMobileMenuOpen(false)}
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ x: 4 }}
+                    whileTap={{ scale: 0.95 }}
                     className="block rounded-lg px-4 py-3 text-[20px] font-semibold text-white hover:bg-white/10"
                   >
-                    {item.label}
+                    Resume →
                   </motion.a>
-                ))}
-              </motion.div>
+                </motion.div>
 
-              {/* Resume */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="mt-8 border-t border-white/10 pt-6"
-              >
-                <motion.a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ x: 4 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="block rounded-lg px-4 py-3 text-[20px] font-semibold text-white hover:bg-white/10"
-                >
-                  Resume →
-                </motion.a>
-              </motion.div>
-            </DialogPanel>
+              </DialogPanel>
+            </motion.div>
           </Dialog>
         )}
       </AnimatePresence>
