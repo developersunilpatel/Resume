@@ -1,6 +1,10 @@
+'use client';
+
 import React from "react";
+import { motion } from "framer-motion";
 import { FiPhone, FiMapPin, FiMail, } from "react-icons/fi";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import SectionTitle from "./SectionTitle";
 
 interface ContactDetails {
@@ -33,14 +37,23 @@ const contactDetails: ContactDetails[] = [
   {
     icon: <FaGithub size={14} />,
     text: "github.com/developersunilpatel",
-    link: "https://github.com/jskpatel/"
+    link: "https://github.com/developersunilpatel/"
+  },
+  {
+    icon: <SiLeetcode size={14} />,
+    text: "leetcode.com/developersunilpatel",
+    link: "https://leetcode.com/u/developersunilpatel/"
   },
 ]
 
 const Contact = () => {
   return (
-    <section
+    <motion.section
       id="contact"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
       className="relative md:min-h-[70vh] overflow-hidden bg-gray-900 text-white md:py-26 py-6"
     >
       {/* Background Glow */}
@@ -59,44 +72,78 @@ const Contact = () => {
         />
       </div>
 
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 70 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="group container scale-[0.95] rounded-xl bg-gray-800 md:p-7 py-7 transition-all duration-300 hover:scale-[1] hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
       >
         <div className="relative z-10 mx-auto flex items-center justify-between gap-16 md:py-14 py-5 md:px-14 xl:px-20">
           <div className="grid grid-cols-1">
             <div className="flex flex-col">
 
-              <SectionTitle title="Let&rsquo;s work together" subTitle="Get in touch" />
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <SectionTitle
+                  title="Let&rsquo;s work together"
+                  subTitle="Get in touch"
+                />
+              </motion.div>
 
-              <p className="max-w-[640px] md:text-[22px] text-[20px] leading-[1.7] text-[#ccc] group-hover:text-white">
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.2,
+                }}
+                viewport={{ once: true }}
+                className="max-w-[640px] md:text-[22px] text-[20px] leading-[1.7] text-[#ccc] group-hover:text-white"
+              >
                 I&rsquo;m open to UI/UX and frontend missions, short or long-term.
                 Landing page, full product redesign, or just a second pair of eyes
                 — let&rsquo;s talk.
-              </p>
+              </motion.p>
 
-              <div className="flex flex-col gap-4 mt-10">
-                {
-                  contactDetails.map((data: ContactDetails, index: number) => {
-                    return <a
+              <div className="mt-10 flex flex-col gap-4">
+                {contactDetails.map(
+                  (data: ContactDetails, index: number) => (
+                    <motion.a
                       key={index}
                       href={data.link}
-                      className="group flex items-center gap-3 text-[#ccc] group-hover:text-white hover:text-white transition-colors md:text-[22px] text-[20px]"
+                      initial={{ opacity: 0, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 0.2,
+                        delay: index * 0.02,
+                      }}
+                      viewport={{ once: true }}
+                      whileHover={{
+                        x: 8,
+                      }}
+                      className="flex items-center gap-3 text-[#ccc] transition-colors md:text-[22px] text-[20px] hover:text-white"
                     >
-                      <span className="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-zinc-800 transition-all duration-300 group-hover:bg-zinc-700">
                         {data.icon}
                       </span>
+
                       <span>{data.text}</span>
-                    </a>
-                  })
-                }
+                    </motion.a>
+                  )
+                )}
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
 
-    </section>
+    </motion.section>
   );
 };
 

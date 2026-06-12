@@ -140,15 +140,33 @@ export default function Skills() {
           </div>
         </div>
 
-        <div className="xl:py-16 lg:py-10 p-0 lg:mt-0 mt-20">
+
+        <motion.div
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="xl:py-16 lg:py-10 p-0 lg:mt-0 mt-20"
+        >
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
             {expertise.map((item, index) => {
               const Icon = item.icon;
 
               return (
-                <div
+                <motion.div
                   key={index}
-                  className="group lg:scale-[0.95] lg:hover:scale-[1] scale-[1] hover:scale-[0.95] rounded-xl bg-gray-700 p-7 transition-all duration-300 hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
+                  initial={{ opacity: 0, y: 70 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.15,
+                  }}
+                  viewport={{ once: true }}
+                  whileHover={{
+                    scale: 1.02,
+                    y: -4,
+                  }}
+                  className="group rounded-xl bg-gray-700 p-7 transition-all duration-300 hover:bg-gray-700/80 hover:shadow-[0_0_30px_rgba(255,122,47,0.08)]"
                 >
                   <div className="mb-14">
                     <Icon
@@ -157,19 +175,18 @@ export default function Skills() {
                     />
                   </div>
 
-                  <h3 className="text-[26px] font-semibold text-white transition-colors duration-300" >
+                  <h3 className="text-[26px] font-semibold text-white transition-colors duration-300">
                     {item.title}
                   </h3>
 
-                  <p className="text-[22px] text-[#ccc] transition-colors duration-300 group-hover:text-white" >
+                  <p className="text-[22px] text-[#ccc] transition-colors duration-300 group-hover:text-white">
                     {item.skills}
                   </p>
-                </div>
+                </motion.div>
               );
             })}
           </div>
-        </div>
-
+        </motion.div>
 
       </div>
     </section>

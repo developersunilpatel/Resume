@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import SectionTitle from "./SectionTitle";
 
 interface Data {
@@ -92,58 +95,103 @@ const Portfolio = () => {
 
           <SectionTitle title="Worked on" subTitle="Portfolio" />
 
-          <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1  gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6"
+          >
             {data.map((item: Data, index: number) => {
               return (
-                <div
+                <motion.div
                   key={index}
-                  className={`group scale-[0.98] hover:scale-[1] transition-all duration-300 bg-gray-700 p-0 rounded-xl overflow-hidden`}
+                  initial={{ opacity: 0, y: 70 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.15,
+                  }}
+                  viewport={{ once: true }}
+                  whileHover={{
+                    scale: 1.02,
+                    y: -6,
+                  }}
+                  className="group overflow-hidden rounded-xl bg-gray-700 transition-all duration-300"
                 >
-                  <span className="block">
-                    <Image
-                      src={item.thumb}
-                      alt={item.title}
-                      height={200}
-                      width={400}
-                      className="h-[200px] w-full object-cover object-top"
-                    />
+                  <span className="block overflow-hidden">
+                    <motion.div
+                      whileHover={{
+                        scale: 1.08,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                    >
+                      <Image
+                        src={item.thumb}
+                        alt={item.title}
+                        height={200}
+                        width={400}
+                        className="h-[200px] w-full object-cover object-top"
+                      />
+                    </motion.div>
                   </span>
+
                   <div className="px-6 py-6">
-                    <div className="min-h-[50px] flex gap-1">
-                      {item?.skills?.map((s: string, index: number) => {
-                        return (
-                          <div
-                            key={index}
-                            className={`flex items-center justify-center border-1 bg-gray-800 rounded-4xl px-2 py-0 h-[24px] text-[12px] border-gray-500`}
-                          >
-                            {s}
-                          </div>
-                        );
-                      })}
-                    </div>
-                    <div className="text-[24px] font-medium font-semibold text-white group-hover:text-[#ff7a2f] transition-colors duration-300 mb-4 block">
-                      {item?.title}
-                    </div>
-                    <ul className="space-y-3 mt-2">
-                      {item?.description?.map((para: string, index: number) => (
-                        <li
+                    <div className="min-h-[50px] flex flex-wrap gap-1">
+                      {item?.skills?.map((s: string, index: number) => (
+                        <motion.div
                           key={index}
-                          className="flex items-start gap-3 text-[18px] text-[#ccc] hover:text-[#fff] transition-colors duration-300"
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{
+                            duration: 0.3,
+                            delay: index * 0.05,
+                          }}
+                          viewport={{ once: true }}
+                          className="flex h-[24px] items-center justify-center rounded-4xl border border-gray-500 bg-gray-800 px-2 py-0 text-[12px]"
                         >
-                          <span className="mt-[10px] h-1.5 w-1.5 rounded-full bg-[#ff7a2f] shrink-0" />
-                          <span>{para.trim()}</span>
-                        </li>
+                          {s}
+                        </motion.div>
                       ))}
+                    </div>
+
+                    <h3 className="mb-4 block text-[24px] font-semibold text-white transition-colors duration-300 group-hover:text-[#ff7a2f]">
+                      {item?.title}
+                    </h3>
+
+                    <ul className="mt-2 space-y-3">
+                      {item?.description?.map(
+                        (para: string, descriptionIndex: number) => (
+                          <motion.li
+                            key={descriptionIndex}
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{
+                              duration: 0.4,
+                              delay: descriptionIndex * 0.08,
+                            }}
+                            viewport={{ once: true }}
+                            className="flex items-start gap-3 text-[18px] text-[#ccc] transition-colors duration-300 hover:text-white"
+                          >
+                            <span className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff7a2f]" />
+                            <span>{para.trim()}</span>
+                          </motion.li>
+                        )
+                      )}
                     </ul>
+
                     <a
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative w-fit flex gap-2 text-[#ccc] text-[16px] group-hover:text-white group-hover:gap-4 transition-all duration-300 items-center mb-3 font-semobold mt-4 cursor-pointer after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#ccc] after:transition-all after:duration-300 group-hover:after:w-full"
+                      className="relative mt-4 mb-3 flex w-fit cursor-pointer items-center gap-2 text-[16px] text-[#ccc] transition-all duration-300 group-hover:gap-4 group-hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#ccc] after:transition-all after:duration-300 group-hover:after:w-full"
                     >
-                      View case study{" "}
+                      View case study
+
                       <svg
-                        className="w-3.5 h-3.5"
+                        className="h-3.5 w-3.5"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -154,14 +202,17 @@ const Portfolio = () => {
                           strokeLinejoin="round"
                           strokeWidth="2"
                           d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        ></path>
+                        />
                       </svg>
                     </a>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
+
+
+
         </div>
       </div>
     </section>
