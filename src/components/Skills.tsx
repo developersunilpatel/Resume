@@ -37,16 +37,16 @@ const skills: Skill[] = [
     percentage: 85,
     color: "from-purple-400 to-fuchsia-600",
   },
-  // {
-  //   name: "Express js",
-  //   percentage: 90,
-  //   color: "from-cyan-400 to-teal-500",
-  // },
-  // {
-  //   name: "Node js",
-  //   percentage: 80,
-  //   color: "from-orange-400 to-red-600",
-  // },
+  {
+    name: "Bootstrap 3-4-5 / Tailwind CSS",
+    percentage: 90,
+    color: "from-cyan-400 to-teal-500",
+  },
+  {
+    name: "UI Development ",
+    percentage: 98,
+    color: "from-orange-400 to-red-600",
+  },
   {
     name: "Performance Optimization",
     percentage: 92,
