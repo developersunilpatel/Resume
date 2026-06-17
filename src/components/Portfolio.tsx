@@ -93,7 +93,7 @@ const Portfolio = () => {
       <div className="relative min-h-[90vh] z-10 mx-auto flex container items-center justify-between gap-16 py-24">
         <div className="flex flex-col">
 
-          <SectionTitle title="Worked on" subTitle="Portfolio" />
+          <SectionTitle title="Worked on" subTitle="Projects" />
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}

@@ -55,7 +55,7 @@ const mobileMenuItem = {
 const menuItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "Projects", href: "#portfolio" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
