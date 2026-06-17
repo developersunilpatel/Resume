@@ -88,7 +88,7 @@ export default function Experience() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <SectionTitle title="Experience" subTitle="Experience" />
+          <SectionTitle title="The Story So Far" subTitle="Experience" />
         </motion.div>
 
         <div className="relative">
