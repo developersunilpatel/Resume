@@ -39,7 +39,7 @@ const skills: Skill[] = [
   },
   {
     name: "Bootstrap 3-4-5 / Tailwind CSS",
-    percentage: 90,
+    percentage: 95,
     color: "from-cyan-400 to-teal-500",
   },
   {
