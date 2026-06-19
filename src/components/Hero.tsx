@@ -1,10 +1,11 @@
 "use client";
 
 import MouseGlow from "@/components/MouseGlow";
-import { motion, Variants } from "framer-motion";
+import { motion, useAnimation, Variants } from "framer-motion";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { HiOutlineMail } from "react-icons/hi";
+import { useEffect } from "react";
 
 const containerVariants = {
   hidden: {},
@@ -34,16 +35,41 @@ const socialVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.15,
     },
   },
 };
 
+const skills = 'REACT.JS | NEXT.JS | TYPESCRIPT | JAVASCRIPT | FRONTEND ARCHITECTURE | UI ENGINEERING | RESPONSIVE WEB DEVELOPMENT | CHROME EXTENSION | PERFORMANCE OPTIMIZATION | COMPONENT REUSABILITY | TEAM LEADERSHIP | API INTEGRATION | AGILE DEVELOPMENT | CROSS-BROWSER COMPATIBILITY | CODE REVIEW & MENTORSHIP | CUSTOM HOOKS | CODE SPLITTING | LAZY LOADING | REACT ROUTER | SSG/SSR | GITHUB COPILOT | BITBUCKET PIPELINE | CURSOR AI | CI/CD WORKFLOWS | JENKINS';
+const colors = [
+  "text-red-400",
+  "text-blue-400",
+  "text-green-400",
+  "text-yellow-400",
+  "text-purple-400",
+  "text-pink-400",
+  "text-cyan-400",
+  "text-orange-400",
+];
+
 const Hero = () => {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({
+      x: ["0%", "-50%"],
+      transition: {
+        duration: 30,
+        ease: "linear",
+        repeat: Infinity,
+      },
+    });
+  }, [controls]);
+
   return (
     <section
       id="hero"
-      className="relative md:min-h-screen min-h-[90vh] overflow-hidden bg-gray-900 py-0 text-white selection:bg-emerald-400/30"
+      className="relative min-h-screen overflow-hidden bg-gray-900 pt-16 text-white selection:bg-emerald-400/30"
     >
       <MouseGlow />
 
@@ -92,14 +118,41 @@ const Hero = () => {
         </motion.div>
 
         {/* Description */}
-        <motion.p
+        <motion.div
           variants={itemVariants}
-          className="mb-4 mt-10 max-w-[640px] text-center text-[24px] leading-[1.8] tracking-[1px] text-[#ccc] md:text-[24px] md:tracking-[2px]"
+          className="mb-4 mt-10 max-w-[1080px] text-center text-[24px] leading-[1.8] tracking-[1px] text-[#ccc] md:text-[24px] md:tracking-[2px]"
         >
-          Crafting exceptional user experiences with <span className="uppercase tracking-[5px] text-[#ff7a2f] block font-bold underline">React.js / Next.js,</span> and modern
-          web technologies. Specialized in performance optimization and scalable
-          frontend architectures.
-        </motion.p>
+          Frontend Developer with <strong>11+ years of experience</strong>,<div className="md:block inline ml-2" />including <strong>6+ years in Web Design</strong> and <strong>4+ years in
+            Frontend Development</strong>. Proficient in <strong>React.js, Next.js, TypeScript, JavaScript, HTML5, CSS3 and responsive
+              Web design</strong>. Experienced in developing scalable web applications, optimizing performance, integrating
+          APIs, building reusable components and delivering high-quality solutions in agile environments.
+        </motion.div>
+        <div className="relative w-full overflow-hidden border-y border-gray-300 py-5">
+
+          <div className="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-gray-900 to-transparent" />
+          <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-gray-900 to-transparent" />
+
+          <motion.div
+            className="flex whitespace-nowrap w-max"
+            animate={{
+              x: [0, -6610],
+            }}
+            transition={{
+              duration: 80,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          >
+            <div className="pr-20 text-[24px] uppercase tracking-[3px]">
+              {skills.split("|").map((s, index) => (
+                <span key={index} className={colors[index % colors.length]}>
+                  {s.trim()}
+                  <span className="px-5 text-zinc-600">|</span>
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        </div>
 
         {/* Social Links */}
         <motion.div
