@@ -111,7 +111,7 @@ const Hero = () => {
         {/* Description */}
         <motion.div
           variants={itemVariants}
-          className="mb-4 mt-10 max-w-[1080px] text-center text-[24px] leading-[1.8] tracking-[1px] text-[#ccc] md:text-[24px] md:tracking-[2px]"
+          className="mb-4 mt-10 max-w-[1080px] text-center leading-[1.8] tracking-[1px] text-[#ccc] md:text-[24px] text-[20px] md:tracking-[2px]"
         >
           Frontend Developer with <strong>11+ years of experience</strong>,<div className="md:block inline ml-2" />including <strong>6+ years in Web Design</strong> and <strong>4+ years in
             Frontend Development</strong>. Proficient in <strong>React.js, Next.js, TypeScript, JavaScript, HTML5, CSS3 and responsive
