@@ -41,16 +41,7 @@ const socialVariants = {
 };
 
 const skills = 'REACT.JS | NEXT.JS | TYPESCRIPT | JAVASCRIPT | FRONTEND ARCHITECTURE | UI ENGINEERING | RESPONSIVE WEB DEVELOPMENT | CHROME EXTENSION | PERFORMANCE OPTIMIZATION | COMPONENT REUSABILITY | TEAM LEADERSHIP | API INTEGRATION | AGILE DEVELOPMENT | CROSS-BROWSER COMPATIBILITY | CODE REVIEW & MENTORSHIP | CUSTOM HOOKS | CODE SPLITTING | LAZY LOADING | REACT ROUTER | SSG/SSR | GITHUB COPILOT | BITBUCKET PIPELINE | CURSOR AI | CI/CD WORKFLOWS | JENKINS';
-const colors = [
-  "text-red-400",
-  "text-blue-400",
-  "text-green-400",
-  "text-yellow-400",
-  "text-purple-400",
-  "text-pink-400",
-  "text-cyan-400",
-  "text-orange-400",
-];
+const colors = ["text-red-400", "text-blue-400", "text-green-400", "text-yellow-400", "text-purple-400", "text-pink-400", "text-cyan-400", "text-orange-400",];
 
 const Hero = () => {
   const controls = useAnimation();
@@ -69,7 +60,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen overflow-hidden bg-gray-900 pt-16 text-white selection:bg-emerald-400/30"
+      className="relative min-h-screen overflow-hidden bg-gray-900 md:pt-16 pt-10 text-white selection:bg-emerald-400/30"
     >
       <MouseGlow />
 
