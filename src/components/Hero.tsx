@@ -118,7 +118,7 @@ const Hero = () => {
               Web design</strong>. Experienced in developing scalable web applications, optimizing performance, integrating
           APIs, building reusable components and delivering high-quality solutions in agile environments.
         </motion.div>
-        <div className="relative w-full overflow-hidden border-y border-gray-300 py-5">
+        <div className="relative w-full overflow-hidden border-y border-gray-300 md:py-5 py-4">
 
           <div className="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-gray-900 to-transparent" />
           <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-gray-900 to-transparent" />
@@ -134,7 +134,7 @@ const Hero = () => {
               ease: "linear",
             }}
           >
-            <div className="pr-20 text-[24px] uppercase tracking-[3px]">
+            <div className="pr-20 md:text-[24px] text-[20px] uppercase tracking-[3px]">
               {skills.split("|").map((s, index) => (
                 <span key={index} className={colors[index % colors.length]}>
                   {s.trim()}
