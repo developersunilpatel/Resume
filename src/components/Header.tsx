@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
@@ -55,13 +55,37 @@ const mobileMenuItem = {
 const menuItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#portfolio" },
+  { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [activeSection, setActiveSection] = useState("about")
+
+  useEffect(() => {
+    const sections = menuItems.map(item => document.querySelector(item.href))
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      {
+        threshold: 0.5
+      }
+    )
+
+    sections.forEach(section => {
+      if (section) observer.observe(section)
+    })
+
+    return () => observer.disconnect();
+  }, [])
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-gray-900/95 backdrop-blur-md border-b border-white/10">
@@ -114,7 +138,7 @@ const Header = () => {
                 y: -2,
                 scale: 1.05,
               }}
-              className="text-[20px] font-semibold text-white transition-colors hover:text-[#ff7a2f]"
+              className={`text-[20px] font-semibold transition-colors ${activeSection === item.href.replace("#", "") ? "text-[#ff7a2f]" : "text-white hover:text-[#ff7a2f]"}`}
             >
               {item.label}
             </motion.a>
@@ -203,7 +227,8 @@ const Header = () => {
                       href={item.href}
                       whileTap={{ scale: 0.97 }}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block rounded-lg px-4 py-3 text-[20px] font-semibold text-white hover:bg-white/10"
+                      className={`block rounded-lg px-4 py-3 text-[20px] font-semibold hover:bg-white/10 ${activeSection === item.href.replace("#", "") ? "text-[#ff7a2f]" : "text-white"
+                        }`}
                     >
                       {item.label}
                     </motion.a>
