@@ -122,7 +122,7 @@ const Hero = () => {
 
         <motion.div
           variants={itemVariants}
-          className="relative w-full overflow-hidden border-y border-gray-300 md:py-5 py-4"
+          className="relative w-full overflow-hidden border-y border-gray-300 md:py-5 py-4 mb-4"
         >
           <motion.div
             initial={{ opacity: 0 }}
