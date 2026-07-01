@@ -148,7 +148,7 @@ const Header = () => {
         {/* Resume Button */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <motion.a
-            href="/resume_frontend_Developer_11yr_Mumbai.pdf"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{
