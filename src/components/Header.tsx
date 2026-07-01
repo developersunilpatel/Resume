@@ -63,29 +63,29 @@ const menuItems = [
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const [activeSection, setActiveSection] = useState("about")
+  const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
-    const sections = menuItems.map(item => document.querySelector(item.href))
+    const sections = menuItems.map((item) => document.querySelector(item.href));
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
+            setActiveSection(entry.target.id);
           }
-        })
+        });
       },
       {
-        threshold: 0.5
-      }
-    )
+        threshold: 0.5,
+      },
+    );
 
-    sections.forEach(section => {
-      if (section) observer.observe(section)
-    })
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
 
     return () => observer.disconnect();
-  }, [])
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-gray-900/95 backdrop-blur-md border-b border-white/10">
@@ -148,7 +148,7 @@ const Header = () => {
         {/* Resume Button */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <motion.a
-            href="/resume.pdf"
+            href="/resume_frontend_Developer_11yr_Mumbai.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{
@@ -193,7 +193,6 @@ const Header = () => {
               className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm"
             >
               <DialogPanel>
-
                 {/* Header */}
                 <div className="flex items-center justify-between">
                   <motion.h2
@@ -227,8 +226,11 @@ const Header = () => {
                       href={item.href}
                       whileTap={{ scale: 0.97 }}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`block rounded-lg px-4 py-3 text-[20px] font-semibold hover:bg-white/10 ${activeSection === item.href.replace("#", "") ? "text-[#ff7a2f]" : "text-white"
-                        }`}
+                      className={`block rounded-lg px-4 py-3 text-[20px] font-semibold hover:bg-white/10 ${
+                        activeSection === item.href.replace("#", "")
+                          ? "text-[#ff7a2f]"
+                          : "text-white"
+                      }`}
                     >
                       {item.label}
                     </motion.a>
@@ -253,7 +255,6 @@ const Header = () => {
                     Resume →
                   </motion.a>
                 </motion.div>
-
               </DialogPanel>
             </motion.div>
           </Dialog>
