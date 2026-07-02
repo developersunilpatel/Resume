@@ -42,7 +42,7 @@ interface Bullet {
 
 const bullets: Bullet[] = [
   {
-    text: "Ahmedabad, Gujarat, India",
+    text: "Mumbai, Maharashtra, India",
     icon: <HiOutlineLocationMarker className="text-[#ff7a2f]" size={22} />,
   },
   {

@@ -14,7 +14,7 @@ const experiences = [
     company: "Celcius Logistics Solutions Private Limited",
     role: "Senior Front-End Developer",
     duration: "April 2024 - Present",
-    location: "Ahmedabad",
+    location: "Mumbai",
     logo: "/experience/celciusLogisticsSolution.png",
     points: [
       "Lead frontend development for logistics management applications using React.js and TypeScript.",
@@ -30,7 +30,7 @@ const experiences = [
     company: "HK Infosoft",
     role: "Front-End Developer & UI Team Lead",
     duration: "January 2022 - March 2024",
-    location: "Delhi",
+    location: "Ahmedabad",
     logo: "/experience/hkInfosoft.jpeg",
     points: [
       "Developed NFT reward platform frontend using ReactJS.",
@@ -43,7 +43,7 @@ const experiences = [
     company: "Artoon Solution Private Limited",
     role: "Design Team Lead",
     duration: "December 2020 - January 2022",
-    location: "Noida",
+    location: "Surat",
     logo: "/experience/artoonsolutions.jpeg",
     points: [
       "Led UI design initiatives and contributed to frontend implementation using React.js",

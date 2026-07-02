@@ -21,7 +21,7 @@ const contactDetails: ContactDetails[] = [
   },
   {
     icon: <FiMapPin size={14} />,
-    text: "Ahmedabad, Gujarat, India",
+    text: "Mumbai, Maharashtra, India",
     link: "#"
   },
   {
