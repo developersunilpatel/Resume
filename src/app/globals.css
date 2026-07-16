@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: heading;
+  src: url(/fonts/heading.otf);
+}
+@font-face {
+  font-family: heading-2;
+  src: url(/fonts/heading-2.otf);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,7 +16,11 @@ html {
 body {
   /* background: #0f172a; */
   color: white;
-  font-size: 12px
+  font-size: 12px;
+  /* user-select: none; */
+}
+*{
+  cursor: none
 }
 
 @import "tailwindcss";
@@ -50,3 +63,6 @@ body {
     }
   }
 }
+
+.text-heading{font-family: heading;}
+.text-heading-2{font-family: heading-2;}

@@ -97,15 +97,15 @@ const Header = () => {
         className="container mx-auto flex items-center justify-between px-6 py-5"
       >
         {/* Logo */}
-        <div className="flex lg:flex-1">
+        <div className="flex lg:flex-1 mt-2">
           <motion.a
             href="#"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="text-white"
           >
-            <strong className="text-[26px] tracking-wide uppercase">
-              &lt;Sunil Patel /&gt;
+            <strong className="text-[54px] tracking-wide uppercase text-heading-2 font-medium leading-[0.7]">
+              Sunil Patel
             </strong>
           </motion.a>
         </div>
