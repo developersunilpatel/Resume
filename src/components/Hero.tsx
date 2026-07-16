@@ -40,8 +40,18 @@ const socialVariants = {
   },
 };
 
-const skills = 'REACT.JS | NEXT.JS | TYPESCRIPT | JAVASCRIPT | FRONTEND ARCHITECTURE | UI ENGINEERING | RESPONSIVE WEB DEVELOPMENT | CHROME EXTENSION | PERFORMANCE OPTIMIZATION | COMPONENT REUSABILITY | TEAM LEADERSHIP | API INTEGRATION | AGILE DEVELOPMENT | CROSS-BROWSER COMPATIBILITY | CODE REVIEW & MENTORSHIP | CUSTOM HOOKS | CODE SPLITTING | LAZY LOADING | REACT ROUTER | SSG/SSR | GITHUB COPILOT | BITBUCKET PIPELINE | CURSOR AI | CI/CD WORKFLOWS | JENKINS';
-const colors = ["text-red-400", "text-blue-400", "text-green-400", "text-yellow-400", "text-purple-400", "text-pink-400", "text-cyan-400", "text-orange-400",];
+const skills =
+  "REACT.JS | NEXT.JS | TYPESCRIPT | JAVASCRIPT | FRONTEND ARCHITECTURE | UI ENGINEERING | RESPONSIVE WEB DEVELOPMENT | CHROME EXTENSION | PERFORMANCE OPTIMIZATION | COMPONENT REUSABILITY | TEAM LEADERSHIP | API INTEGRATION | AGILE DEVELOPMENT | CROSS-BROWSER COMPATIBILITY | CODE REVIEW & MENTORSHIP | CUSTOM HOOKS | CODE SPLITTING | LAZY LOADING | REACT ROUTER | SSG/SSR | GITHUB COPILOT | BITBUCKET PIPELINE | CURSOR AI | CI/CD WORKFLOWS | JENKINS";
+const colors = [
+  "text-red-400",
+  "text-blue-400",
+  "text-green-400",
+  "text-yellow-400",
+  "text-purple-400",
+  "text-pink-400",
+  "text-cyan-400",
+  "text-orange-400",
+];
 
 const Hero = () => {
   const controls = useAnimation();
@@ -113,10 +123,17 @@ const Hero = () => {
           variants={itemVariants}
           className="mb-4 mt-10 max-w-[1080px] text-center leading-[1.8] tracking-[1px] text-[#ccc] md:text-[24px] text-[20px] md:tracking-[2px]"
         >
-          Frontend Developer with <strong>11+ years of experience</strong>,<div className="md:block inline ml-2" />including <strong>6+ years in Web Design</strong> and <strong>5+ years in
-            Frontend Development</strong>. Proficient in <strong>React.js, Next.js, TypeScript, JavaScript, HTML5, CSS3 and responsive
-              Web design</strong>. Experienced in developing scalable web applications, optimizing performance, integrating
-          APIs, building reusable components and delivering high-quality solutions in agile environments.
+          Frontend Developer with <strong>11 years of experience</strong>,
+          <div className="md:block inline ml-2" />
+          including <strong>6 years in Web Design</strong> and{" "}
+          <strong>5 years in Frontend Development</strong>. Proficient in{" "}
+          <strong>
+            React.js, Next.js, TypeScript, JavaScript, HTML5, CSS3 and
+            responsive Web design
+          </strong>
+          . Experienced in developing scalable web applications, optimizing
+          performance, integrating APIs, building reusable components and
+          delivering high-quality solutions in agile environments.
         </motion.div>
 
         <motion.div
@@ -128,7 +145,6 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
           >
-
             <div className="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-gray-900 to-transparent" />
             <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-gray-900 to-transparent" />
 
