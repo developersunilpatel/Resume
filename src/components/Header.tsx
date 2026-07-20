@@ -94,7 +94,7 @@ const Header = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
         aria-label="Global"
-        className="container mx-auto flex items-center justify-between px-6 py-5"
+        className="container mx-auto flex items-center justify-between px-6 md:py-5 pt-3 pb-2"
       >
         {/* Logo */}
         <div className="flex lg:flex-1 mt-2">
@@ -157,7 +157,7 @@ const Header = () => {
             whileTap={{
               scale: 0.95,
             }}
-            className="text-[20px] font-semibold text-white hover:text-[#ff7a2f]"
+            className="text-[46px] font-semibold text-white hover:text-[#ff7a2f] text-heading tracking-[4px] leading-[0.7]"
           >
             Resume →
           </motion.a>
@@ -195,13 +195,16 @@ const Header = () => {
               <DialogPanel>
                 {/* Header */}
                 <div className="flex items-center justify-between">
-                  <motion.h2
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="text-[24px] font-bold text-white uppercase"
+                  <motion.a
+                    href="#"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="text-white"
                   >
-                    &lt;Sunil Patel /&gt;
-                  </motion.h2>
+                    <strong className="text-[54px] tracking-wide uppercase text-heading-2 font-medium leading-[0.7]">
+                      Sunil Patel
+                    </strong>
+                  </motion.a>
 
                   <motion.button
                     whileTap={{ scale: 0.9 }}
@@ -226,11 +229,10 @@ const Header = () => {
                       href={item.href}
                       whileTap={{ scale: 0.97 }}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`block rounded-lg px-4 py-3 text-[20px] font-semibold hover:bg-white/10 ${
-                        activeSection === item.href.replace("#", "")
+                      className={`block rounded-lg px-4 py-3 text-[20px] font-semibold hover:bg-white/10 ${activeSection === item.href.replace("#", "")
                           ? "text-[#ff7a2f]"
                           : "text-white"
-                      }`}
+                        }`}
                     >
                       {item.label}
                     </motion.a>
@@ -250,7 +252,7 @@ const Header = () => {
                     rel="noopener noreferrer"
                     whileHover={{ x: 4 }}
                     whileTap={{ scale: 0.95 }}
-                    className="block rounded-lg px-4 py-3 text-[20px] font-semibold text-white hover:bg-white/10"
+                    className="block rounded-lg px-4 py-3 text-[66px] font-semibold text-white hover:bg-white/10 text-heading tracking-[4px]"
                   >
                     Resume →
                   </motion.a>

@@ -113,8 +113,8 @@ const Hero = () => {
         >
           <div className="absolute inset-0 bg-emerald-500/20 opacity-20 blur-3xl" />
 
-          <h1 className="text-center font-bold capitalize tracking-[1px] text-[#ff7a2f] lg:text-[124px] md:text-[84px] text-[54px] md:tracking-[4px] text-heading">
-            &lt;frontend developer/&gt;
+          <h1 className="text-center font-bold capitalize tracking-[1px] text-[#ff7a2f] xl:text-[100px] lg:text-[80px] md:text-[60px] sm:text-[54px] text-[44px] md:tracking-[4px] text-heading">
+            &lt;frontend reactJs developer/&gt;
           </h1>
         </motion.div>
 
